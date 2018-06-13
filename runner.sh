@@ -1,5 +1,6 @@
 #!/bin/bash
 
+sleep 40s &&
 
 DB_USER='root';
 DB_PASSWD='root123';
