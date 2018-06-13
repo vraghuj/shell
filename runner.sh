@@ -19,6 +19,6 @@ do
 mysql --user=$DB_USER --password=$DB_PASSWD $DB_NAME -h $DB_HOST -e "INSERT INTO $TABLE VALUES (UNIX_TIMESTAMP(now()) ,'cert_pa','cert_pa',FLOOR(1 + (RAND() * 9999)),FLOOR(1 + (RAND() * 9999)),FLOOR(1 + (RAND() * 9999)))"
 
 # Pause the insertion of data into the table for 10 sec
-mysql --user=$DB_USER --password=$DB_PASSWD $DB_NAME -e "DO SLEEP(10)"  
+sleep 10s  
 
 done
