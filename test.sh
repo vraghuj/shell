@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 var_sql=sql-10
 var_spr=spr-10
