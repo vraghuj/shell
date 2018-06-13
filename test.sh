@@ -1,9 +1,9 @@
 #!/bin/bash
 
-var_sql=sql-430
-var_spr=spr-430
-sql_name=sqldb-430
-container_name=madamdb-430
+var_sql=sql-440
+var_spr=spr-440
+sql_name=sqldb-440
+container_name=madamdb-440
 
 
 
