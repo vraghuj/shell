@@ -1,9 +1,9 @@
 #!/bin/bash
 
-var_sql=sql-443                # Variable holding sql dockerfile name.
-var_spr=spr-443                # Variable holding spring-boot dockerfile name
-sql_name=sqldb-443             # Variable holding the sql container name.
-container_name=madamdb-443     # variable holding spring-boot container name
+var_sql=sql-444                # Variable holding sql dockerfile name.
+var_spr=spr-444                # Variable holding spring-boot dockerfile name
+sql_name=sqldb-444             # Variable holding the sql container name.
+container_name=madamdb-444     # variable holding spring-boot container name
 
 
 
