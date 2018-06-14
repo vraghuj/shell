@@ -3,7 +3,7 @@
 var_sql=sql-800                # Variable holding sql dockerfile name.
 var_spr=spr-800                # Variable holding spring-boot dockerfile name
 sql_name=sqldb-800             # Variable holding the sql container name.
-container_name=madamdb-446     # variable holding spring-boot container name
+container_name=madamdb-800     # variable holding spring-boot container name
 
 
 
