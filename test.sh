@@ -1,9 +1,9 @@
 #!/bin/bash
 
 var_sql=sqlimage                # Variable holding sql dockerfile name.
-var_spr=spr-springimage                # Variable holding spring-boot dockerfile name
-sql_name=sqldb-sqlcontainers             # Variable holding the sql container name.
-container_name=madamdb-springcontainers     # variable holding spring-boot container name
+var_spr=springimage                # Variable holding spring-boot dockerfile name
+sql_name=sqlcontainers             # Variable holding the sql container name.
+container_name=springcontainers     # variable holding spring-boot container name
 
 
 
