@@ -1,14 +1,16 @@
 #!/bin/bash
 
-var_sql=sqld_3                # Variable holding sql dockerfile name.
-var_spr=springd_3               # Variable holding spring-boot dockerfile name
-sql_name=sql_contd_3          # Variable holding the sql container name.
-container_name=spring_contd_3     # variable holding spring-boot container name
+var_sql=sqld_4                # Variable holding sql dockerfile name.
+var_spr=springd_4               # Variable holding spring-boot dockerfile name
+sql_name=sql_contd_4          # Variable holding the sql container name.
+container_name=spring_contd_4     # variable holding spring-boot container name
 
 containers=$(sudo docker ps | awk '{if(NR>1) print $NF}')  # To get names of active containers
-               
+echo "----------------------------------------------------------------------------------------------------------------------------"
+
 docker ps        # To list any running containers.
 
+echo "----------------------------------------------------------------------------------------------------------------------------"
 
 #For loop to iterate over containers and kill if any active contianers exits.
 for container in $containers
@@ -18,9 +20,9 @@ do
 
 done
 echo "No more active containers"
-
+echo "----------------------------------------------------------------------------------------------------------------------------"
 docker ps
-
+echo "----------------------------------------------------------------------------------------------------------------------------"
 docker build -f Sqldockerfile -t $var_sql .    # Building the docker image from sql dockerfile
 docker build -f dockerfile -t $var_spr .       # Building the docker image from spring-boot dockerfile
 docker run -d --name=$sql_name $var_sql        # Running the mysql container in background.
