@@ -1,9 +1,9 @@
 #!/bin/bash
 
-var_sql=sqld_5                # Variable holding sql dockerfile name.
-var_spr=springd_5               # Variable holding spring-boot dockerfile name
-sql_name=sql_contd_5          # Variable holding the sql container name.
-container_name=spring_contd_5     # variable holding spring-boot container name
+var_sql=sqld_6                # Variable holding sql dockerfile name.
+var_spr=springd_6               # Variable holding spring-boot dockerfile name
+sql_name=sql_contd_6          # Variable holding the sql container name.
+container_name=spring_contd_6     # variable holding spring-boot container name
 
 containers=$(sudo docker ps | awk '{if(NR>1) print $NF}')  # To get names of active containers
 echo "----------------------------------------------------------------------------------------------------------------------------"
@@ -16,7 +16,7 @@ echo "--------------------------------------------------------------------------
 for container in $containers
 
 do
- echo "The terminated docker contianers are" docker kill $container
+  docker kill $container
 
 done
 
