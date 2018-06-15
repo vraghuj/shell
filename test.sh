@@ -1,11 +1,24 @@
 #!/bin/bash
 
-var_sql=sqld                # Variable holding sql dockerfile name.
-var_spr=springd               # Variable holding spring-boot dockerfile name
-sql_name=sql_contd          # Variable holding the sql container name.
-container_name=spring_contd     # variable holding spring-boot container name
+var_sql=sqld_1                # Variable holding sql dockerfile name.
+var_spr=springd_1               # Variable holding spring-boot dockerfile name
+sql_name=sql_contd_1          # Variable holding the sql container name.
+container_name=spring_contd_1     # variable holding spring-boot container name
+
+containers=$(sudo docker ps | awk '{if(NR>1) print $NF}')  # To get names of active containers
+echo $containers        # To print names of active containers
 
 
+#For loop to iterate over containers and kill if any active contianers exits.
+for container in $containers
+
+do
+ docker kill $container
+
+done
+echo "No more active containers"
+
+docker ps
 
 docker build -f Sqldockerfile -t $var_sql .    # Building the docker image from sql dockerfile
 docker build -f dockerfile -t $var_spr .       # Building the docker image from spring-boot dockerfile
