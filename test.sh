@@ -6,7 +6,8 @@ sql_name=sql_contd_1          # Variable holding the sql container name.
 container_name=spring_contd_1     # variable holding spring-boot container name
 
 containers=$(sudo docker ps | awk '{if(NR>1) print $NF}')  # To get names of active containers
-echo $containers        # To print names of active containers
+echo $containers # To print names of active containers
+docker ps        # To list any running containers.
 
 
 #For loop to iterate over containers and kill if any active contianers exits.
