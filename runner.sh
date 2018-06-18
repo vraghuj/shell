@@ -4,7 +4,7 @@ sleep 40s &&  # Making the script sleep for 40sec and Run the following commands
 
 DB_USER='root';         # Variable holding the username of  mysql
 DB_PASSWD='root123';    # Variable holding the Password of  mysql 
-DB_HOST='172.17.0.2';    # Mysql container IP as Host to connect.
+DB_HOST='172.17.0.2'    # Mysql container IP as Host to connect.
 DB_NAME='lrt_mfstats';  # Database Name in the mysql
 TABLE='20180507_tfp_gaps_index';    # Table in the database.
 
