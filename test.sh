@@ -1,9 +1,9 @@
 #!/bin/bash
 
-var_sql=sqld_12                # Variable holding sql dockerfile name.
-var_spr=springd_12               # Variable holding spring-boot dockerfile name
-sql_name=sql_contd_12          # Variable holding the sql container name.
-container_name=spring_contd_12     # variable holding spring-boot container name
+var_sql=sqld_13                # Variable holding sql dockerfile name.
+var_spr=springd_13               # Variable holding spring-boot dockerfile name
+sql_name=sql_contd_13          # Variable holding the sql container name.
+container_name=spring_contd_13     # variable holding spring-boot container name
 
 containers=$(sudo docker ps | awk '{if(NR>1) print $NF}')  # To get names of active containers
 echo "----------------------------------------------------------------------------------------------------------------------------"
