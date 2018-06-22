@@ -14,7 +14,7 @@ function setConnected(connected) {
     $("#greetings").html("");
     $("#data").html("");
 }
-
+//Connect Function
 function connect() {
 	ws = new WebSocket('ws://192.168.195.104:8080/name');
 	ws1 = new WebSocket('ws://192.168.195.104:8080/data'); 
